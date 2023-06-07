@@ -789,7 +789,7 @@ const BaseSelect = React.forwardRef((props: BaseSelectProps, ref: React.Ref<Base
           showSearch={mergedShowSearch}
           autoClearSearchValue={autoClearSearchValue}
           mode={mode}
-          { ...(showAriaDescendantId && { activeDescendantId: activeDescendantId})}
+          activeDescendantId={showAriaDescendantId && activeDescendantId ? activeDescendantId : null}
           tagRender={tagRender}
           values={displayValues}
           open={mergedOpen}
