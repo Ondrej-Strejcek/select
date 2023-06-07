@@ -379,6 +379,7 @@ const BaseSelect = React.forwardRef((props: BaseSelectProps, ref: React.Ref<Base
 
       if (!disabled) {
         setInnerOpen(nextOpen);
+        setShowAriaDescendantId(true)
 
         if (mergedOpen !== nextOpen) {
           onDropdownVisibleChange?.(nextOpen);
@@ -746,6 +747,8 @@ const BaseSelect = React.forwardRef((props: BaseSelectProps, ref: React.Ref<Base
     [`${prefixCls}-show-search`]: mergedShowSearch,
   });
 
+  const [showAriaDescendantId, setShowAriaDescendantId] = React.useState<boolean>(false);
+
   // >>> Selector
   const selectorNode = (
     <SelectTrigger
@@ -786,7 +789,7 @@ const BaseSelect = React.forwardRef((props: BaseSelectProps, ref: React.Ref<Base
           showSearch={mergedShowSearch}
           autoClearSearchValue={autoClearSearchValue}
           mode={mode}
-          activeDescendantId={activeDescendantId}
+          { ...(showAriaDescendantId && { activeDescendantId: activeDescendantId})}
           tagRender={tagRender}
           values={displayValues}
           open={mergedOpen}

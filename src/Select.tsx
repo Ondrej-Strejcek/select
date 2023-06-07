@@ -647,7 +647,7 @@ const Select = React.forwardRef(
           emptyOptions={!displayOptions.length}
           // >>> Accessibility
           activeValue={activeValue}
-          activeDescendantId={`${mergedId}_list_${accessibilityIndex}`}
+          {...(accessibilityIndex !== -1 && { activeDescendantId: `${mergedId}_list_${accessibilityIndex}`})}
         />
       </SelectContext.Provider>
     );

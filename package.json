@@ -1,5 +1,5 @@
 {
-  "name": "rc-select",
+  "name": "react-select",
   "version": "14.5.2",
   "description": "React Select",
   "engines": {
@@ -20,10 +20,10 @@
     "es",
     "lib"
   ],
-  "homepage": "http://github.com/react-component/select",
+  "homepage": "https://github.com/Ondrej-Strejcek/select/tree/os/activeDescendantIdRender",
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-component/select.git"
+    "url": "git@github.com:Ondrej-Strejcek/select.git"
   },
   "bugs": {
     "url": "http://github.com/react-component/select/issues"
@@ -33,7 +33,7 @@
     "start": "dumi dev",
     "build": "dumi build",
     "compile": "father build",
-    "prepublishOnly": "npm run compile && np --yolo --no-publish",
+    "prepublishOnly": "npm run compile && np --yolo --no-publish --any-branch",
     "lint": "eslint src/ docs/examples/ --ext .tsx,.ts,.jsx,.js",
     "test": "rc-test",
     "tsc": "tsc --noEmit",
