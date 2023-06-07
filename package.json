@@ -1,6 +1,6 @@
 {
   "name": "react-select",
-  "version": "14.5.3-wcag-dropdown.2",
+  "version": "14.5.3-wcag-dropdown.3",
   "description": "React Select",
   "engines": {
     "node": ">=8.x"
