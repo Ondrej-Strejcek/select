@@ -822,6 +822,7 @@ const BaseSelect = React.forwardRef((props: BaseSelectProps, ref: React.Ref<Base
         onKeyUp={onInternalKeyUp}
         onFocus={onContainerFocus}
         onBlur={onContainerBlur}
+        aria-required={undefined}
       >
         {mockFocused && !mergedOpen && (
           <span
